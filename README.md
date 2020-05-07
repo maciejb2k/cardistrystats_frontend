@@ -2,7 +2,7 @@
 
 Abandoned full stack project from 2019. I've came up with idea to store data about cardistry skills and card decks in one place. I've made UI, frontend and backend but it became too complex and large to finish. I'm linking video below with quick presentation of what I've done during few weeks.
 
-Technology stack: React/Redux/Redux Saga + Django Rest Framework + MySQL
+Technology stack: React/Redux/Redux Saga + Django Rest Framework/JWT + MySQL.
 
 This repo contains only FrontEnd.
 
