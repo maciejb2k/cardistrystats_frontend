@@ -1,0 +1,127 @@
+@import "App/__styles__/variables.scss";
+
+.DashHeader {
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    padding: 0 30px;
+    justify-content: space-between;
+    background: #ffffff;
+
+    .Hamburger {
+        width: 30px;
+        height: 25px;
+        display: flex;
+        margin-right: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        border: 0;
+        background: 0;
+
+        .Hamburger-bar {
+            height: 5px;
+            transition: 0.3s;
+
+            &:nth-child(1) {
+                width: 70%;
+                background: #555555;
+            }
+
+            &:nth-child(2) {
+                width: 70%;
+                background: $main-brand;
+                align-self: flex-end;
+            }
+
+            &:nth-child(3) {
+                width: 70%;
+                background: #000000;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            .Hamburger-bar {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 100%;
+                }
+
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 997px) {
+            display: flex;
+        }
+    }
+
+    .Hamburger--active {
+        position: relative;
+        z-index: 25;
+        right: 0;
+        transition: 0.3s;
+
+        .Hamburger-bar {
+            &:nth-child(1) {
+                width: 100%;
+                transform: translateY(10px) rotate(-135deg);
+                background: #ffffff;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+                transform: translateY(-10px) rotate(135deg);
+                background: #ffffff;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            transform: rotate(90deg);
+        }
+    }
+
+    .DashHeader-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .DashHeader-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            visibility: hidden;
+        }
+
+        @media screen and (max-width: 400px) {
+            display: none;
+        }
+    }
+
+    .DashHeader-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 500px) {
+            font-size: 1.6rem;
+        }
+    }
+}

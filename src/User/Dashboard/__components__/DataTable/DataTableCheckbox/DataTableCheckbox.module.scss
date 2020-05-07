@@ -1,0 +1,53 @@
+@import "App/__styles__/variables.scss";
+
+.Checkbox {
+    position: relative;
+
+    .Checkbox-input {
+        width: 20px;
+        height: 20px;
+        background: 0;
+        opacity: 0;
+        position: absolute;
+        display: flex;
+
+        & + .Checkbox-label::before {
+            content: "";
+            display: flex;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 1px solid $main-brand;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+
+        &:checked + .Checkbox-label::before {
+            background: $main-brand;
+        }
+
+        &:checked + .Checkbox-label::after {
+            content: "";
+            position: absolute;
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            top: 6px;
+            left: 4px;
+            height: 5px;
+            width: 12px;
+            transform: rotate(-45deg);
+            display: flex;
+        }
+
+        &:focus + .Checkbox-label::before {
+            outline: #5d9dd5 solid 2px;
+        }
+    }
+
+    .Checkbox-label {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

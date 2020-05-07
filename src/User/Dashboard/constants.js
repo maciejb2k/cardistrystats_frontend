@@ -1,0 +1,1 @@
+export const TOGGLE_NAV_REQUEST = "TOGGLE_NAV_REQUEST";

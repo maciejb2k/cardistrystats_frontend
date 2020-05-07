@@ -1,0 +1,15 @@
+.DashPage {
+    padding: 40px 50px;
+
+    @media screen and (max-width: 1400px) {
+        padding: 20px;
+    }
+
+    .DashPage-title {
+        color: #000000;
+    }
+
+    .DashPage-desc {
+        color: #3c3c3c;
+    }
+}

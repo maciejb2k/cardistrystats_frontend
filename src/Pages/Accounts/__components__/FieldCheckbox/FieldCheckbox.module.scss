@@ -1,0 +1,73 @@
+@import "App/__styles__/variables.scss";
+
+.Checkbox {
+    position: relative;
+    align-self: flex-start;
+    padding-bottom: 40px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+
+    .Checkbox-input {
+        width: 20px;
+        height: 20px;
+        background: 0;
+        opacity: 0;
+        position: absolute;
+
+        & + .Checkbox-label::before {
+            content: "";
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            display: inline-block;
+            background: white;
+            border: 1px solid $main-brand;
+            transition: background .2s;
+        }
+
+        &:checked + .Checkbox-label::before {
+            background: $main-brand;
+        }
+
+        &:checked + .Checkbox-label::after {
+            content: '';
+            position: absolute;
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            top: 6px;
+            left: 4px;
+            height: 5px;
+            width: 12px;
+            transform: rotate(-45deg);
+            display: flex;
+          }
+
+          &:focus + .Checkbox-label::before {
+            outline: #5d9dd5 solid 2px;
+          }
+    }
+
+    .Checkbox-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .Input-message {
+        padding-left: 5px;
+    }
+
+    .Input-message--error {
+        color: $error;
+    }
+
+    .Input-message--warning {
+        color: $warning;
+    }
+}

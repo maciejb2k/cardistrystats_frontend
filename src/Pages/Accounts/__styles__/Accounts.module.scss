@@ -1,0 +1,102 @@
+@import "App/__styles__/variables.scss";
+
+.AccountWrapper {
+    display: flex;
+    height: 100vh;
+    transition: 0.1s;
+
+    .AccountContent {
+        width: 700px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: scroll;
+        transition: width .4s;
+
+        .AccountFooter, .AccountHeader {
+            height: 125px;
+            text-align: center;
+            display: flex;
+            align-self: stretch;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            flex: 0 0 125px;
+        }
+
+        .AccountBody {
+            padding: 0 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            align-self: stretch;
+        }
+
+        .AccountFooter {
+            .AccountFooter-content {
+                font-weight: 300;
+                font-size: 1.8rem;
+                color: $text-light;
+            }
+        }
+
+        @media screen and (max-width: 997px) {
+            overflow-y: auto;
+            width: 100%;
+        }
+    }
+
+    .AccountBackground {
+        // TODO Smooth transition
+        background: url("/images/cardistry-bg.jpg") no-repeat 10% center #000000;
+        background-size: cover;
+        width: auto;
+        flex: 1;
+        position: relative;
+        transition: 0.5s;
+
+        .AccountBackground-backButton {
+            border: 0;
+            background: $main-brand;
+            color: #ffffff;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .1s ease-in;
+
+            &:hover {
+                background: $main-brand--darker;
+            }
+
+            &:hover, &:focus {
+                background: $main-brand--darker;
+            }
+
+            @media screen and (max-width: 997px) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 997px) {
+            width: 0;
+        }
+    }
+
+    @media screen and (max-width: 997px) {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+    }
+}

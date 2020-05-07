@@ -1,0 +1,10 @@
+@import "App/__styles__/variables.scss";
+
+.ReCaptcha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    flex-direction: column;
+    color: $error;
+}

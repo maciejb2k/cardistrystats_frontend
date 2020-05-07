@@ -1,0 +1,42 @@
+@import "App/__styles__/variables.scss";
+
+.Dash {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.1s;
+    background: #f7f7f7;
+
+    .DashMain {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        position: relative;
+        transition: width 0.2s ease-in-out;
+
+        .DashContent {
+            position: relative;
+        }
+    }
+
+    .DashMain--active {
+        width: calc(100% - 400px);
+
+        @media screen and (max-width: 1400px) {
+            width: 100%;
+
+            .DashOverlay {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.2);
+                transition: background-color 0.2s;
+            }
+        }
+    }
+}

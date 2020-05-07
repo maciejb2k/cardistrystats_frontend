@@ -1,0 +1,170 @@
+@import "App/__styles__/variables.scss";
+
+.FormWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Form {
+        max-width: 500px;
+        width: 450px;
+        padding: 0 10px;
+
+        .FormHeader,
+        .FormBody,
+        .FormFooter {
+            padding: 30px 0;
+        }
+
+        .FormHeader,
+        .FormBody {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .FormHeader {
+            .FormHeader-title {
+                font-weight: 600;
+            }
+            .FormHeader-desc {
+                color: #717171;
+            }
+        }
+
+        .FormBody {
+            .InputWrapper {
+                margin-bottom: 25px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .InputHeader {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+
+                    .Label {
+                        display: block;
+                    }
+
+                    .Error {
+                        color: $error;
+                        margin-left: 5px;
+                        text-align: right;
+                    }
+                }
+
+                .Input {
+                    display: block;
+                    border-radius: 7px;
+                    transition: border 0.1s;
+                    padding: 15px;
+                    width: 100%;
+
+                    .Input-selectEl {
+                        padding: 0;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .Input--text {
+                    border: 1px solid #dddddd;
+
+                    &:hover,
+                    &:focus {
+                        border: 1px solid $main-brand;
+                    }
+                }
+
+                .Input--select {
+                    padding: 15px 0;
+                    appearance: none;
+                    text-indent: 15px;
+                    border: 1px solid #dddddd;
+                    background-image: url("/images/dropdown_arrow.png");
+                    background-repeat: no-repeat;
+                    background-position: 95% 50%;
+
+                    &::-ms-expand {
+                        display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+                    }
+
+                    &:hover,
+                    &:focus {
+                        border: 1px solid $main-brand;
+                    }
+                }
+                .Input--error {
+                    border: 1px solid $error;
+
+                    &:hover,
+                    &:focus {
+                        border: 1px solid $error--darker;
+                    }
+                }
+            }
+        }
+
+        .FormFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .FormFooter-links {
+                .FormFooter-back {
+                    display: flex;
+                    align-items: center;
+                    color: #717171;
+                    text-decoration: underline;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .FormFooter-buttons {
+                .Button {
+                    border: 0;
+                    background: 0;
+                    padding: 15px 30px;
+                    margin-left: 20px;
+                    border-radius: 7px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &[disabled]:hover {
+                        cursor: not-allowed;
+                    }
+                }
+
+                .Button--submit {
+                    background: $main-brand;
+                    color: #ffffff;
+                    font-weight: 600;
+                    transition: background 0.1s;
+
+                    &:hover,
+                    &:focus {
+                        background: $main-brand--darker;
+                    }
+
+                    &[disabled] {
+                        background: #d6d6d6;
+                    }
+                }
+
+                .Button--reset {
+                    border: 1px solid #d6d6d6;
+                    color: #717171;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

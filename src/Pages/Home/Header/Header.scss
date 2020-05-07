@@ -1,0 +1,258 @@
+@import "App/__styles__/variables.scss";
+
+.Navbar {
+    background: 0;
+    z-index: 10;
+
+    .Navbar-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        flex: 0 0 100px;
+        justify-content: space-between;
+        position: relative;
+
+        .Navbar-brand {
+            .Navbar-brandImg {
+                width: 200px;
+            }
+            .Navbar-brandName {
+                color: #ffffff;
+                font-size: 3rem;
+
+                .Navbar-brandName--coloured {
+                    color: $main-brand;
+                }
+            }
+        }
+
+        .Hamburger {
+            width: 30px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+            border: 0;
+            background: 0;
+            display: none;
+
+            .Hamburger-bar {
+                height: 5px;
+                transition: 0.3s;
+
+                &:nth-child(1) {
+                    width: 70%;
+                    background: $main-light;
+                }
+
+                &:nth-child(2) {
+                    width: 70%;
+                    background: $main-brand;
+                    align-self: flex-end;
+                }
+
+                &:nth-child(3) {
+                    width: 70%;
+                    background: $main-light--light;
+                }
+            }
+
+            &:hover, &:focus {
+                cursor: pointer;
+                .Hamburger-bar {
+                    &:nth-child(1) {
+                        width: 100%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 100%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            @media screen and (max-width: 997px) {
+                display: flex;
+            }
+        }
+
+        .Hamburger--active {
+            position: relative;
+            z-index: 25;
+            right: 0;
+            transition: .3s;
+
+            .Hamburger-bar {
+                &:nth-child(1) {
+                    width: 100%;
+                    transform: translateY(10px) rotate(-135deg);
+                    background: #ffffff;
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    width: 100%;
+                    transform: translateY(-10px) rotate(135deg);
+                    background:  #ffffff;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                transform: rotate(90deg);
+            }
+        }
+
+        .Navbar-nav {
+            .Navbar-navList {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .Navbar-navEl {
+                    text-transform: uppercase;
+                    height: 80px;
+                    padding: 0 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: $main-light--light;
+                    // border-bottom: 5px solid $main-brand;
+
+                    @media screen and (max-width: 997px) {
+                        background: #f3f3f3;
+                        padding: 0;
+                        width: 100%;
+                    }
+                }
+
+                .Navbar-navEl--active {
+                    color: $main-brand;
+                }
+
+                @media screen and (max-width: 997px) {
+                    flex-direction: column;
+                }
+            }
+
+            @media screen and (max-width: 997px) {
+                display: none;
+            }
+        }
+
+        .Navbar-links {
+            display: flex;
+
+            .Navbar-navLink {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 0;
+                background: 0;
+                font-weight: 700;
+                font-family: inherit;
+                font-size: 1.4rem;
+                color: #ffffff;
+                text-transform: uppercase;
+                border-radius: 5px;
+                height: 50px;
+                width: 120px;
+                margin-left: 10px;
+
+                &:nth-child(-n+1) {
+                    margin: 0;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .Navbar-navLink--main {
+                background: $main-brand;
+                border: 2px solid $main-brand;
+            }
+
+            .Navbar-navLink--dash {
+                background: #ffffff;
+                border: 2px solid #ffffff;
+                color: #000000;
+            }
+
+            .Navbar-navLink--secondary {
+                border: 2px solid $main-brand;
+            }
+
+            @media screen and (max-width: 997px) {
+                display: none;
+            }
+        }
+    }
+
+    .MobileNav {
+        display: none;
+    }
+
+    @media screen and (max-width: 997px) {
+        .MobileNav {
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            max-height: 0;
+            background: $main-brand;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .5s ease-out;
+
+            .MobileNav-nav {
+                .MobileNav-navList {
+                    list-style-type: none;
+
+                    .MobileNav-navEl {
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: 300;
+                        color: #ffffff;
+                        padding: 20px 0;
+
+                        .MobileNav-navLink {
+                            border: 0;
+                            background: #ffffff;
+                            font-weight: 700;
+                            font-size: 1.6rem;
+                            color: #000000;
+                            text-transform: uppercase;
+                            padding: 15px 100px;
+                            border-radius: 5px;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .MobileNav--expanded {
+            max-height: 100%;
+            transition: all .5s ease-in;
+        }
+    }
+}

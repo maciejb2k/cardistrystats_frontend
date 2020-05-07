@@ -1,0 +1,155 @@
+@import "App/__styles__/variables.scss";
+
+.Table {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+
+    .Table-noResults {
+        text-align: center;
+        margin: 30px;
+        color: #717171;
+    }
+
+    .TableHeaderRow {
+        display: flex;
+        margin: 15px 0;
+
+        .TableHeaderCell {
+            flex: 1 1 0;
+            padding: 20px 20px;
+            text-transform: capitalize;
+            font-weight: 700;
+            color: #4f753d;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .TableBody {
+        .TableBodyRow {
+            display: flex;
+            transition: 0s ease-in;
+            background: #ffffff;
+            box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.05);
+            margin-bottom: 10px;
+            border-radius: 7px;
+            border: 1px solid transparent;
+            transition: border 0.1s;
+
+            .TableBodyCell {
+                flex: 1 1 0;
+                padding: 15px;
+                display: flex;
+
+                .TableBodyCell-title {
+                    display: none;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    font-size: 1.4rem;
+                    width: 50%;
+
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                    }
+                }
+
+                .TableBodyCell-value {
+                    word-wrap: break-word;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        width: 50%;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    padding: 20px;
+                }
+            }
+
+            .RowEdit {
+                position: relative;
+
+                .RowEdit-button {
+                    border: 0;
+                    background: 0;
+                    font-size: 2.5rem;
+                    display: block;
+                    color: $main-brand;
+                    transition: all 0.1s;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .RowEdit-list {
+                    display: none;
+                    list-style-type: none;
+                    position: absolute;
+                    z-index: 1;
+                    right: 0;
+                    box-shadow: 0px 5px 10px rgba(50, 50, 50, 0.2);
+                    border: 1px solid $main-brand;
+
+                    .RowEdit-el {
+                        background: #ffffff;
+                        width: 200px;
+                        padding: 10px 10px;
+                        border-bottom: 1px solid #ebebeb;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            margin-right: 10px;
+                        }
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+
+                        &:hover {
+                            background: #ebebeb;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                svg {
+                    display: block;
+                }
+            }
+
+            .RowEdit--active {
+                .RowEdit-button {
+                    color: black;
+                    transform: rotate(90deg);
+                }
+
+                .RowEdit-list {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                border: 1px solid rgb(119, 176, 94);
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        .TableBodyRow--selected {
+            border: 1px solid $main-brand;
+        }
+    }
+}

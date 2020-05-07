@@ -1,0 +1,68 @@
+@import "App/__styles__/variables.scss";
+
+.FormHeader {
+    text-align: center;
+    padding: 50px 0;
+
+    .FormHeader-title {
+        font-size: 2.5rem;
+
+        .FormHeader-title--coloured {
+            color: $main-brand;
+            text-transform: capitalize;
+        }
+    }
+
+    .FormHeader-text {
+        color: $text-light;
+    }
+}
+
+.FormBody {
+    width: 100%;
+    padding-bottom: 30px;
+
+    .FormBody-submitButton {
+        width: 100%;
+        border: 0;
+        padding: 15px 0;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: #ffffff;
+        border-radius: 50px;
+        background: $main-brand;
+        transition: background .1s ease-in;
+
+        &:focus, &:hover {
+            background: $main-brand--darker;
+            cursor: pointer;
+        }
+
+        &[disabled] {
+            background: #dcdcdc;
+            cursor: wait;
+        }
+    }
+}
+
+.FormError {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+    background: $error;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.FormFooter {
+    display: flex;
+    flex-direction: column;
+
+    .FormFooter-link {
+        text-align: center;
+        text-decoration: underline;
+        color: $text-light;
+    }
+}

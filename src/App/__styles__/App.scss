@@ -1,0 +1,59 @@
+@import "App/__styles__/variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    outline-color: $main-brand;
+}
+
+body {
+    font-family: "Source Sans Pro";
+    font-size: 1.6rem;
+}
+
+#root {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.swal2-popup {
+    font-size: 1.6rem !important;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    background: rgba(0, 0, 0, 0.4)!important;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}

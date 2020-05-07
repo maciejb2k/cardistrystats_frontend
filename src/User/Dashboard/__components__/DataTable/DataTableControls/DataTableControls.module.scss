@@ -1,0 +1,218 @@
+@import "App/__styles__/variables.scss";
+
+.Controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    transition: background 0.1s;
+    border-radius: 7px;
+
+    .TableInfo {
+        display: flex;
+        align-items: center;
+
+        .TableInfo-title {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .TableInfo-text {
+            color: #717171;
+
+            .TableInfo-text--bold {
+                font-weight: 600;
+                color: #333333;
+            }
+
+            .TableInfo-fragment {
+                margin-left: 10px;
+
+                &::before {
+                    content: "-";
+                    margin-right: 10px;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:first-child::before {
+                    content: "";
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .Controls-right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 1200px) {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+}
+
+.Controls--delete {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.Button {
+    font-weight: 600;
+    font-size: 2rem;
+    height: 45px;
+    width: 45px;
+    border: 0;
+    border-radius: 7px;
+    box-shadow: 0px 3px 5px rgba(50, 50, 50, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+    }
+}
+
+.Button--add {
+    color: #ffffff;
+    background: $main-brand;
+    margin-left: 30px;
+    box-shadow: 0px 3px 5px rgba(50, 50, 50, 0.1);
+}
+
+.Button--filter {
+    color: #ffffff;
+    background: #567747;
+    margin-left: 10px;
+}
+
+.Ordering {
+    position: relative;
+
+    .OrderingList {
+        list-style-type: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        box-shadow: 0px 3px 5px rgba(50, 50, 50, 0.1);
+        border: 1px solid #ebebeb;
+
+        .OrderingList-el {
+            width: 200px;
+            padding: 12px 15px;
+            background: #ffffff;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #ebebeb;
+            z-index: 2;
+            text-align: left;
+            outline: 0;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: #ebebeb;
+            }
+
+            &:focus {
+                background: #eaeaea;
+            }
+        }
+
+        .OrderingList-name {
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #ffffff;
+        }
+    }
+}
+
+.Button--sort {
+    margin-left: 30px;
+    color: #ffffff;
+    background: #795548;
+}
+
+.Button--delete {
+    color: #ffffff;
+    background: #b71c1c;
+    height: 45px;
+    width: 45px;
+    font-size: 2rem;
+    border-radius: 7px;
+    margin-right: 20px;
+}
+
+.Search {
+    display: flex;
+    margin-left: 30px;
+    box-shadow: 0px 3px 5px rgba(50, 50, 50, 0.1);
+
+    .Search-input {
+        flex-shrink: 1;
+        height: 45px;
+        padding: 0 20px;
+        border: 0;
+        display: block;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+
+    .Search-button {
+        height: 45px;
+        width: 50px;
+        color: #ffffff;
+        background: $main-brand;
+        border: 0;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 0;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}

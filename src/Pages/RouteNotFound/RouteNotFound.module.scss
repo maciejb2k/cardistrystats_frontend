@@ -1,0 +1,35 @@
+@import "App/__styles__/variables.scss";
+
+.NotFound {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: center;
+
+    .NotFound-title {
+        font-size: 8rem;
+        padding-bottom: 20px;
+    }
+
+    .NotFound-desc {
+        width: 700px;
+        font-size: 2rem;
+        color: $text-light;
+        padding-bottom: 20px;
+    }
+
+    .NotFound-link {
+        font-size: 2rem;
+        color: #256de0;
+        text-decoration: underline;
+        margin-bottom: 50px;
+    }
+
+    .NotFound-img {
+        width: 700px;
+        height: auto;
+    }
+}
