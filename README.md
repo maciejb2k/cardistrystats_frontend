@@ -1,4 +1,5 @@
 # CardistryStats
+[![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 
 Abandoned full stack project from 2019. I've came up with idea to store data about cardistry skills and card decks in one place. I've made UI, frontend and backend but it became too complex and large to finish.
 
