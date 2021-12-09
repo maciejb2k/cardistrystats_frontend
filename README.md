@@ -13,7 +13,6 @@ I'm linking video with quick presentation of what I've done during few weeks. Cl
 
 ## Screenshots
 ![Login screen](https://img.youtube.com/vi/SYCXDZxXfq8/maxres1.jpg)
-![Flourish page](https://lh3.googleusercontent.com/u/0/d/16oCh9F1GTBfVBIsNKxgVlcWKS3c2Q2k8=w2560-h947-iv2)
 ![Flourish](https://user-images.githubusercontent.com/6316812/145455049-5be2a427-1563-40dd-9723-3ae90cb78793.jpg)
 ![Flourishes List](https://user-images.githubusercontent.com/6316812/145455079-d07850c2-d86b-498e-aafd-6639489e9dfd.jpg)
 ![Add Flourish](https://user-images.githubusercontent.com/6316812/145455091-89776632-c143-4d89-bf55-804d392cbce9.jpg)
